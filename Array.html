@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div id="content">
+
+    </div>
+    <script>
+        
+    //    Array of companies
+    companies = [
+        {
+            // user inputs details of first company
+           
+            "id" : 1,
+            "Name" : prompt ("Enter company name"),
+            "Email" : prompt("Enter company Email"),
+            "Phone" : prompt("Enter company Phone number"),
+            "Location" : prompt("Enter company location")
+
+        },
+
+        
+        {
+            // user inputs details of second company
+            "id" : 2,
+            "Name" : prompt("Enter company name"),
+            "Email" : prompt("Enter company Email"),
+            "Phone" : prompt("Enter company Phone number"),
+            "Location" : prompt("Enter company location")
+        },
+        {
+            // user inputs details of third company
+            "id" : 3,
+            "Name" : prompt("Enter company name"),
+            "Email" : prompt("Enter company Email"),
+            "Phone" : prompt("Enter company Phone number"),
+            "Location" : prompt("Enter company location")
+        },
+        {
+            // user inputs details of fourth company
+            "id" : 4,
+            "Name" : prompt("Enter company name"),
+            "Email" : prompt("Enter company Email"),
+            "Phone" : prompt("Enter company Phone number"),
+            "Location" : prompt("Enter company location")
+        }
+    ]
+
+    // javascript injects content into the HTML div container with the ID "content"
+    document.getElementById("content").innerHTML = `<table>
+        <tr>
+        <th>S/N</th>
+        <th>Company Name  </th>
+        <th>Company Email  </th>
+        <th>Company Phone   </th>
+        <th>Company Location</th>
+        </tr>
+        <tbody>
+        
+            ${companies.map(            
+                (x) => 
+                `<tr>
+                <td>${x.id}</td>
+                <td>${x.Name}</td>
+                <td>${x.Email}</td>
+                <td>${x.Phone}</td>
+                <td>${x.Location}</td> 
+                </tr>`
+            )}
+        </table>` ;    
+
+   
+    
+    </script>
+
+
+    
+</body>
+</html>

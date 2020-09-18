@@ -1,0 +1,13 @@
+
+/* centering the content of the table */
+#content table {
+    text-align: center;
+   
+    
+}
+/* styling the table contents */
+#content th, #content td {
+    padding: 10px;
+    border: black  4px solid;
+    
+}
